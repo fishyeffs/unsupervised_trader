@@ -53,20 +53,32 @@ def preprocess_data(df):
 
     return X_train, y_train, X_test, y_test
 
+load = input("Load model? (y/n) ")
+save = input("Save model? (y/n) ")
+epochs = int(input("Number of epochs: "))
+
 # Usage:
 df = pd.read_csv('BTC-2017min.csv')
 X_train, y_train, X_test, y_test = preprocess_data(df)
 
 # Create an instance of the class
 predictor = StockPredictor(input_dim=6)
+if load is 'y':
+    predictor.model = tf.keras.models.load_model("btc_model.keras")
+else:
+    try:
+        predictor.train(X_train, y_train, epochs)
+    except ValueError as err:
+        print('Train error', err)
 
 # Train the model
-try:
-    predictor.train(X_train, y_train, epochs=100)
-except ValueError as err:
-    print('Train error', err)
 
 # Make predictions
 likelihoods = predictor.predict(X_test)
+if save is 'y':
+    predictor.model.save("btc_model.keras")
 
 print(likelihoods)
+print(likelihoods.size)
+meanVal = np.mean(likelihoods)
+print("Mean value: {:.2f}".format(meanVal))
