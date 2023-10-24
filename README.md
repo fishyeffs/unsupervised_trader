@@ -7,11 +7,11 @@ god's willed neural network to make one million gorillion dollar
 # Stages 
 Stages of implementation based on priority and difficulty:
 ## Level 1
-Create AI model that can classify trading patterns. Computes % match to the pattern (compared against real historical data)\n
+Create AI model that can classify trading patterns. Computes % match to the pattern (compared against real historical data) \n
 ## Level 2
-Create a widget which connects to binance account etc. so that software can be used on binance / create website which takes displays market data and indicators etc\n
+Create a widget which connects to binance account etc. so that software can be used on binance / create website which takes displays market data and indicators etc \n
 ## Level 3
-Create extension which uses computer vision to analyse graph on user’s screen\n
+Create extension which uses computer vision to analyse graph on user’s screen \n
 
 # What does it do?
 High level requirements are ordered by priority
