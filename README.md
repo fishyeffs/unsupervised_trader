@@ -1,2 +1,2 @@
-# unsupervised_mashallah
-god's willed neural network to make one million gorillion dollar
+# unsupervised_trader
+god's willed neural network (keras) to make one million dollars
